@@ -1,1 +1,86 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
 
+html,body{
+    width:100%;
+    height:100%;
+    overflow:hidden;
+    background:#120021;
+}
+
+#intro{
+    position:relative;
+    width:100%;
+    height:100vh;
+    background:url("assets/wallpaper.png") center center/cover no-repeat;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.overlay{
+    position:absolute;
+    inset:0;
+    background:linear-gradient(
+        rgba(18,0,33,.35),
+        rgba(18,0,33,.65),
+        rgba(18,0,33,.9)
+    );
+}
+
+.content{
+    position:relative;
+    z-index:5;
+    color:white;
+    text-align:center;
+    padding:25px;
+}
+
+.content h1{
+    font-size:46px;
+    margin-bottom:15px;
+}
+
+.subtitle{
+    font-size:18px;
+    opacity:.9;
+    margin-bottom:220px;
+}
+
+.swipeIndicator{
+    position:absolute;
+    left:50%;
+    transform:translateX(-50%);
+    bottom:45px;
+
+    width:320px;
+    padding:16px;
+
+    border-radius:40px;
+
+    background:rgba(255,255,255,.12);
+
+    backdrop-filter:blur(15px);
+
+    animation:float 2s infinite;
+}
+
+@keyframes float{
+
+0%{
+transform:translate(-50%,0);
+}
+
+50%{
+transform:translate(-50%,-10px);
+}
+
+100%{
+transform:translate(-50%,0);
+}
+
+}
