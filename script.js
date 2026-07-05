@@ -79,6 +79,6 @@ next1.addEventListener("click", () => {
 
 next2.addEventListener("click", () => {
 
-    alert("Calendar Page Coming Soon ❤️");
+    window.location.href = "calendar.html";
 
 });
