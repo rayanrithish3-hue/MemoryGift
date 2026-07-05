@@ -1,0 +1,380 @@
+/* =========================
+   GLOBAL
+========================= */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+
+background:linear-gradient(180deg,#120021,#1b0035,#250048);
+
+min-height:100vh;
+
+color:white;
+
+overflow-x:hidden;
+
+}
+
+/* =========================
+   BACKGROUND
+========================= */
+
+.background-stars{
+
+position:fixed;
+
+inset:0;
+
+background-image:
+
+radial-gradient(circle,#ffffff55 1px,transparent 1px),
+
+radial-gradient(circle,#c084fc55 1px,transparent 1px),
+
+radial-gradient(circle,#ffffff33 1px,transparent 1px);
+
+background-size:
+
+120px 120px,
+
+180px 180px,
+
+250px 250px;
+
+animation:starsMove 80s linear infinite;
+
+z-index:-2;
+
+}
+
+@keyframes starsMove{
+
+from{
+
+transform:translateY(0);
+
+}
+
+to{
+
+transform:translateY(-250px);
+
+}
+
+}
+
+/* =========================
+   CONTAINER
+========================= */
+
+.container{
+
+width:100%;
+
+max-width:500px;
+
+margin:auto;
+
+padding:30px 20px 40px;
+
+text-align:center;
+
+}
+
+.container h1{
+
+font-size:40px;
+
+font-weight:700;
+
+margin-top:10px;
+
+}
+
+.subtitle{
+
+margin-top:10px;
+
+font-size:17px;
+
+opacity:.85;
+
+margin-bottom:35px;
+
+}
+
+/* =========================
+   MONTH TITLE
+========================= */
+
+#calendarTitle{
+
+font-size:34px;
+
+font-weight:600;
+
+margin-bottom:30px;
+
+}
+
+/* =========================
+   CALENDAR
+========================= */
+
+#calendar{
+
+background:rgba(255,255,255,.05);
+
+backdrop-filter:blur(18px);
+
+border:1px solid rgba(255,255,255,.08);
+
+border-radius:25px;
+
+padding:20px;
+
+box-shadow:0 0 35px rgba(139,92,246,.18);
+
+}
+
+/* weekday row */
+
+.weekdays{
+
+display:grid;
+
+grid-template-columns:repeat(7,1fr);
+
+margin-bottom:18px;
+
+font-size:15px;
+
+opacity:.8;
+
+}
+
+/* date grid */
+
+.days{
+
+display:grid;
+
+grid-template-columns:repeat(7,1fr);
+
+gap:12px;
+
+}
+
+/* date */
+
+.day{
+
+height:48px;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+border-radius:50%;
+
+cursor:pointer;
+
+transition:.35s;
+
+}
+
+/* hover */
+
+.day:hover{
+
+background:rgba(255,255,255,.08);
+
+}
+
+/* highlighted memory */
+
+.memory{
+
+background:rgba(192,132,252,.20);
+
+box-shadow:
+
+0 0 12px rgba(192,132,252,.45),
+
+0 0 25px rgba(192,132,252,.18);
+
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.buttons{
+
+margin-top:35px;
+
+display:flex;
+
+justify-content:space-between;
+
+gap:15px;
+
+}
+
+.buttons button{
+
+flex:1;
+
+padding:15px;
+
+border:none;
+
+border-radius:40px;
+
+background:#7c3aed;
+
+color:white;
+
+font-size:16px;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+.buttons button:hover{
+
+background:#8b5cf6;
+
+transform:translateY(-2px);
+
+}
+
+/* =========================
+   POPUP
+========================= */
+
+.popup{
+
+position:fixed;
+
+inset:0;
+
+background:rgba(0,0,0,.55);
+
+display:none;
+
+justify-content:center;
+
+align-items:center;
+
+backdrop-filter:blur(8px);
+
+}
+
+.popup-card{
+
+width:88%;
+
+max-width:420px;
+
+background:rgba(255,255,255,.08);
+
+backdrop-filter:blur(22px);
+
+border:1px solid rgba(255,255,255,.15);
+
+border-radius:25px;
+
+padding:30px;
+
+position:relative;
+
+animation:popup .35s ease;
+
+}
+
+@keyframes popup{
+
+from{
+
+transform:scale(.8);
+
+opacity:0;
+
+}
+
+to{
+
+transform:scale(1);
+
+opacity:1;
+
+}
+
+}
+
+#closePopup{
+
+position:absolute;
+
+top:18px;
+
+right:22px;
+
+font-size:28px;
+
+cursor:pointer;
+
+}
+
+#popupDate{
+
+margin-bottom:20px;
+
+font-size:28px;
+
+}
+
+#popupContent{
+
+line-height:2;
+
+font-size:17px;
+
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:500px){
+
+.container h1{
+
+font-size:34px;
+
+}
+
+#calendarTitle{
+
+font-size:30px;
+
+}
+
+.day{
+
+height:42px;
+
+}
+
+}
