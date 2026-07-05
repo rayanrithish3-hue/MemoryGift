@@ -123,6 +123,149 @@ function renderCalendar() {
 
     calendar.appendChild(dayGrid);
 
+attachMemoryEvents();
+
 }
 
 renderCalendar();
+
+// =====================================
+// POPUP EVENTS
+// =====================================
+
+function attachMemoryEvents() {
+
+    const monthName = months[currentMonth];
+
+    const data = calendarData[monthName];
+
+    const cells = document.querySelectorAll(".day");
+
+    cells.forEach(cell => {
+
+        const value = parseInt(cell.innerText);
+
+        if (!isNaN(value) && data.memories[value]) {
+
+            cell.addEventListener("click", () => {
+
+                popup.style.display = "flex";
+
+                popupDate.innerHTML = `${value} ${monthName} ${data.year}`;
+
+                popupContent.innerHTML = "";
+
+                data.memories[value].forEach(memory => {
+
+                    const line = document.createElement("p");
+
+                    line.innerHTML = memory;
+
+                    popupContent.appendChild(line);
+
+                });
+
+            });
+
+        }
+
+    });
+
+}
+
+// =====================================
+// CLOSE POPUP
+// =====================================
+
+closePopup.addEventListener("click", () => {
+
+    popup.style.display = "none";
+
+});
+
+// click outside popup
+
+popup.addEventListener("click", (e) => {
+
+    if (e.target === popup) {
+
+        popup.style.display = "none";
+
+    }
+
+});
+
+// =====================================
+// INITIALIZE
+// =====================================
+
+attachMemoryEvents();
+
+if(currentMonth===0){
+
+previousBtn.style.display="none";
+
+}else{
+
+previousBtn.style.display="block";
+
+}
+
+if(currentMonth===months.length-1){
+
+nextBtn.innerHTML="Click Me ❤️";
+
+}else{
+
+nextBtn.innerHTML="Next →";
+
+}
+// =====================================
+// BUTTONS
+// =====================================
+
+previousBtn.style.display = "none";
+
+previousBtn.addEventListener("click", () => {
+
+    if (currentMonth > 0) {
+
+        currentMonth--;
+
+        renderCalendar();
+
+        if (currentMonth === 0) {
+
+            previousBtn.style.display = "none";
+
+        }
+
+        nextBtn.innerHTML = "Next →";
+
+    }
+
+});
+
+nextBtn.addEventListener("click", () => {
+
+    if (currentMonth < months.length - 1) {
+
+        currentMonth++;
+
+        renderCalendar();
+
+        previousBtn.style.display = "block";
+
+        if (currentMonth === months.length - 1) {
+
+            nextBtn.innerHTML = "Click Me ❤️";
+
+        }
+
+    } else {
+
+        window.location.href = "hidden.html";
+
+    }
+
+});
