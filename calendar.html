@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Our Memory Calendar 💜</title>
+
+<link rel="stylesheet" href="calendar.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="background-stars"></div>
+
+<div class="container">
+
+<h1>Our Memory Calendar 💜</h1>
+
+<p class="subtitle">
+
+Every date has a beautiful story...
+
+</p>
+
+<div id="calendarTitle"></div>
+
+<div id="calendar"></div>
+
+<div class="buttons">
+
+<button id="previousBtn">
+
+← Previous
+
+</button>
+
+<button id="nextBtn">
+
+Next →
+
+</button>
+
+</div>
+
+</div>
+
+<!-- POPUP -->
+
+<div id="popup" class="popup">
+
+<div class="popup-card">
+
+<span id="closePopup">&times;</span>
+
+<h2 id="popupDate"></h2>
+
+<div id="popupContent"></div>
+
+</div>
+
+</div>
+
+<script src="calendarData.js"></script>
+
+<script src="calendar.js"></script>
+
+</body>
+
+</html>
