@@ -1,35 +1,63 @@
-const btn=document.getElementById("sendBtn");
+const btn = document.getElementById("sendBtn");
+const box = document.getElementById("message");
+const success = document.getElementById("success");
 
-const box=document.getElementById("message");
+btn.addEventListener("click", () => {
 
-const success=document.getElementById("success");
+    const message = box.value.trim();
 
-btn.onclick=()=>{
+    if(message===""){
 
-if(box.value.trim()===""){
+        alert("Please type your thoughts ❤️");
 
-alert("Please type something ❤️");
+        return;
 
-return;
+    }
 
-}
+    emailjs.send(
 
-confetti({
+        "service_2v4q2ul",
 
-particleCount:250,
+        "template_ya0ui7v",
 
-spread:180,
+        {
 
-origin:{y:.6}
+            message:message
+
+        }
+
+    )
+
+    .then(()=>{
+
+        confetti({
+
+            particleCount:250,
+
+            spread:180,
+
+            origin:{y:.6}
+
+        });
+
+        success.style.display="block";
+
+        box.value="";
+
+        setTimeout(()=>{
+
+            success.style.display="none";
+
+        },3000);
+
+    })
+
+    .catch((error)=>{
+
+        console.log(error);
+
+        alert("Message could not be sent.");
+
+    });
 
 });
-
-success.style.display="block";
-
-setTimeout(()=>{
-
-success.style.display="none";
-
-},3000);
-
-};
