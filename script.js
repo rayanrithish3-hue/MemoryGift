@@ -9,6 +9,9 @@ const video2 = document.getElementById("video2");
 const next1 = document.getElementById("video1Next");
 const next2 = document.getElementById("memoryButton");
 
+const introVideo1 = document.getElementById("introVideo1");
+const introVideo2 = document.getElementById("introVideo2");
+
 // ===========================
 // SWIPE DETECTION
 // ===========================
@@ -66,6 +69,9 @@ document.addEventListener("mouseup", (e) => {
 // VIDEO 1
 // ===========================
 
+next1.classList.remove("showButton");
+next2.classList.remove("showButton");
+
 next1.addEventListener("click", () => {
 
     video1.classList.remove("active");
@@ -80,5 +86,21 @@ next1.addEventListener("click", () => {
 next2.addEventListener("click", () => {
 
     window.location.href = "calendar.html";
+
+});
+
+// ===========================
+// SHOW BUTTON AFTER VIDEO END
+// ===========================
+
+introVideo1.addEventListener("ended",()=>{
+
+next1.classList.add("showButton");
+
+});
+
+introVideo2.addEventListener("ended",()=>{
+
+next2.classList.add("showButton");
 
 });
