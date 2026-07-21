@@ -99,59 +99,19 @@ html,body{
 
 }
 
-/* ===========================
-   SWIPE BOX
-=========================== */
+.swipe-text{
 
-.swipe-box{
+margin-top:40px;
 
-    position:absolute;
+font-size:22px;
 
-    left:50%;
+font-weight:500;
 
-    transform:translateX(-50%);
+letter-spacing:.5px;
 
-    bottom:40px;
+color:white;
 
-    width:320px;
-
-    padding:16px;
-
-    border-radius:40px;
-
-    text-align:center;
-
-    color:white;
-
-    background:rgba(255,255,255,.12);
-
-    backdrop-filter:blur(16px);
-
-    border:1px solid rgba(255,255,255,.18);
-
-    animation:float 2s ease-in-out infinite;
-
-}
-
-@keyframes float{
-
-0%{
-
-transform:translate(-50%,0);
-
-}
-
-50%{
-
-transform:translate(-50%,-10px);
-
-}
-
-100%{
-
-transform:translate(-50%,0);
-
-}
+opacity:.9;
 
 }
 
