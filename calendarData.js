@@ -3,13 +3,13 @@ const calendarData = {
     year: 2026,
     month: 1,
     memories: {
-      11: ["📍 Tiruppalai", "🍔 Yum Yards"],
-      18: ["🏍 Yamaha", "☕ Mug & Beans"],
-      19: ["🚶 TSM to Theppakulam"],
-      20: ["⛰ Thiruparangundram"],
-      21: ["🍽 Namma Kadai"],
-      22: ["🌄 Samanar Hills"],
-      26: ["🥣 Thirunagar (Mini Idly)"]
+      11: ["📍 Tiruppalai", "🍔 Yum Yards", " Friend's Mehandi Function"],
+      18: ["🏍 Scooty Service", "☕ Mug & Beans"],
+      19: ["🚶 TSM to Theppakulam first long scooty ride for you"],
+      20: ["⛰ Thiruparangundram appa amma kooda barbeque nation"],
+      21: ["🍽 Namma Kadai la night dinner"],
+      22: ["🌄 Enna First time Samanar Hills kottitu pona"],
+      26: ["🥣 Thirunagar la Mini Idly cravings a fulfill pannom"]
     }
   },
 
@@ -18,10 +18,10 @@ const calendarData = {
     month: 2,
     memories: {
       2: ["☕ Mug & Beans"],
-      7: ["☕ Mug & Beans", "📍 Kalavasal"],
-      10: ["🌄 Samanar Hills", "🍽 Mini Tiffin"],
-      11: ["📍 Kalavasal", "🛍 Miniso", "🏛 Theppakulam"],
-      12: ["🧶 Crochet Gift"],
+      7: ["☕ Mug & Beans", "📍 Kalavasal la pani poori saaptom aprm light balloon, bommai vaangunom"],
+      10: ["🌄 Mini Tiffin order potu Samanar Hills la poi saaptom"],
+      11: ["📍 Kalavasal", "🛍 Miniso", "🏛 Theppakulam inga laam ponom"],
+      12: ["🧶 Crochet Gift for your Birthday"],
       13: ["🏍 Bike Ride"],
       17: ["☕ Mug & Beans"],
       21: ["🛵 Scooty Water Wash", "🍔 Bell Jumbo", "🛍 Westside", "🏍 Bike Ride"],
