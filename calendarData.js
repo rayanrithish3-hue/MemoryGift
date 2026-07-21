@@ -17,7 +17,7 @@ const calendarData = {
     year: 2026,
     month: 2,
     memories: {
-      2: ["☕ Mug & Beans"],
+      2: ["☕ Mug & Beans ponom"],
       7: ["☕ Mug & Beans poitu aprm Kalavasal la pani poori saaptom aprm light balloon, bommai laam vaangunom"],
       10: ["🌄 Mini Tiffin order potu Samanar Hills la poi saaptom"],
       11: ["📍 Kalavasal, Miniso, Theppakulam inga laam ponom"],
@@ -38,7 +38,7 @@ const calendarData = {
     memories: {
       1: ["🪽 Siragugal poitu saaptutu un Bday ku gift aa naa hyderabad poi vangitu vantha Lac Bangles kuduthen 🛍 Saravana Selvarathinam aprm Vishaal De Mall aprm Theppakulam ponom anga irunthu un fav dosa saapda famous dosa kadaiku kootitu ponen"],
       2: ["☕ Mug & Beans poitu anga irunthu kalavasal poitu KFC la order potutu Pani Poori saapda poitom"],
-      3: ["🍫 Chocolate Room nalla irukum nu enna kootitu pona enaku pudichi irunthuchi but unaku pudikala unnoda expectations a meet pannala"],
+      3: ["🍫 Chocolate Room nalla irukum nu enna kootitu pona enaku pudichi irunthuchi but unaku pudikala 😅 unnoda expectations a meet pannala"],
       4: ["🧵 Friend marriage ku alter kudutha saree a Tailor Shop poitu vaangitu vanthom aprm un fav mini idly saapda Amman Hotel ponom but kedaikala aprm Villapuram Bridge la first time Rain 🌧 la Drive panna traffic la"],
       5: ["💇 Friend oda engagement ku blow dry panna Naturals ponom poitu Shell petrol Bunk la Sweet Beer vaangitu aprm un fav 🍫 Fudgy Milo parcel vaangitu ponom"],
       6: ["💍 Un Friend engagement ku Arunachalam Mahal ponom poitu Food Bazaar la Mini Idly parcel vaangitu Coffee kudichitu aprm nee mahal la chocolate keta enkita apo illa adhaan 🏍 Moto Space ku poitu unaku chocolate vaangi kuduthen"],
