@@ -1,16 +1,9 @@
-// ===========================
-// ELEMENTS
-// ===========================
-
-const envelope = document.getElementById("envelope");
+const envelope = document.getElementById("envelopeContainer");
+const flap = document.getElementById("flap");
+const letter = document.getElementById("letter");
 const continueBtn = document.getElementById("continueBtn");
-const message = document.getElementById("message");
 
 let opened = false;
-
-// ===========================
-// OPEN ENVELOPE
-// ===========================
 
 envelope.addEventListener("click", () => {
 
@@ -18,36 +11,24 @@ envelope.addEventListener("click", () => {
 
     opened = true;
 
-    // Open animation
-    envelope.classList.add("open");
+    // Open the top flap
+    flap.classList.add("open");
 
-    // Show message after letter comes up
+    // Wait for flap animation
     setTimeout(() => {
-
-        message.innerHTML = `
-        Every memory with you<br>
-        means more than words can say.<br>
-        ❤️
-        `;
-
-    }, 600);
+        letter.classList.add("open");
+    }, 450);
 
     // Show continue button
     setTimeout(() => {
-
         continueBtn.classList.add("show");
-
-    }, 1000);
+    }, 1200);
 
 });
 
-// ===========================
-// CONTINUE
-// ===========================
-
 continueBtn.addEventListener("click", () => {
 
-    // Change this if your next page name is different
+    // Change this to your next page
     window.location.href = "feedback.html";
 
 });
