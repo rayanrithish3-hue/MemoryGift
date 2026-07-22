@@ -6,76 +6,130 @@
 }
 
 body{
-    height:100vh;
     display:flex;
     justify-content:center;
     align-items:center;
-    background:linear-gradient(135deg,#160024,#2c0a4d,#4c1d95);
+    height:100vh;
+    background:linear-gradient(135deg,#180028,#34105f,#5b21b6);
     overflow:hidden;
 }
 
-.scene{
+.wrapper{
     text-align:center;
 }
 
 .envelope{
     position:relative;
     width:320px;
-    height:210px;
+    height:220px;
     cursor:pointer;
 }
 
-.back{
+/* ---------------- Letter ---------------- */
+
+.letter{
+    position:absolute;
+    left:20px;
+    right:20px;
+    bottom:15px;
+
+    height:180px;
+
+    background:#ffffff;
+    border-radius:10px;
+
+    z-index:1;
+
+    transform:translateY(120px);
+
+    transition:1s ease;
+}
+
+.letterContent{
+    opacity:0;
+    padding:22px;
+    transition:.5s;
+}
+
+.letterContent h2{
+    color:#7c3aed;
+    margin-bottom:18px;
+}
+
+#message{
+    color:#444;
+    min-height:90px;
+    line-height:1.7;
+}
+
+#continueBtn{
+    display:none;
+    margin-top:20px;
+    padding:12px 26px;
+    border:none;
+    border-radius:30px;
+    background:#8b5cf6;
+    color:white;
+    font-size:15px;
+}
+
+/* ---------------- Envelope ---------------- */
+
+.cover{
     position:absolute;
     width:100%;
     height:100%;
     background:#8b5cf6;
-    border-radius:10px;
-    box-shadow:0 15px 40px rgba(0,0,0,.35);
-    z-index:1;
+    border-radius:12px;
+    z-index:3;
 }
+
+/* Bottom V shape */
+
+.cover::before{
+    content:"";
+    position:absolute;
+    width:100%;
+    height:100%;
+    background:#7c3aed;
+
+    clip-path:polygon(0 0,50% 55%,100% 0,100% 100%,0 100%);
+}
+
+/* Top flap */
 
 .flap{
     position:absolute;
     width:100%;
     height:110px;
+
     background:#a78bfa;
+
     clip-path:polygon(0 0,100% 0,50% 100%);
+
     transform-origin:top;
+
     transition:.8s;
+
     z-index:4;
 }
 
-.letter{
-    position:absolute;
-    left:10%;
-    top:18%;
-    width:80%;
-    height:88%;
-    background:white;
-    border-radius:8px;
-    z-index:2;
-    transition:1s ease;
-    overflow:hidden;
+.tapText{
+    margin-top:40px;
+    color:white;
+    font-size:18px;
 }
 
-.letter-content{
-    padding:25px;
-    opacity:0;
-    transition:.5s;
+/* ---------- Open Animation ---------- */
+
+.envelope.open .flap{
+    transform:rotateX(180deg);
 }
 
-.letter-content h2{
-    color:#7c3aed;
-    margin-bottom:20px;
+.envelope.open .letter{
+    transform:translateY(-70px);
 }
 
-#message{
-    color:#444;
-    line-height:1.7;
-    min-height:120px;
+.envelope.open .letterContent{
+    opacity:1;
 }
-
-#continueBtn{
-    display:none;
-    margin
