@@ -9,52 +9,81 @@
 }
 
 body{
-
     font-family:'Poppins',sans-serif;
-
-    background:linear-gradient(135deg,#22003f,#3b136f,#5f2ccf);
-
-    min-height:100vh;
-
+    background:#2d0b59;
     display:flex;
-
     justify-content:center;
-
     align-items:center;
-
+    min-height:100vh;
     overflow:hidden;
-
 }
 
-.page{
-
+.wrapper{
     display:flex;
-
     flex-direction:column;
-
     align-items:center;
-
 }
 
 /* ===========================
    ENVELOPE
 =========================== */
 
-.envelope-container{
-
+.envelope{
     position:relative;
-
-    width:360px;
-
-    height:240px;
-
+    width:340px;
+    height:230px;
 }
 
 /* ===========================
-   SVG
+   LETTER
 =========================== */
 
-.envelope-image{
+.letter{
+    position:absolute;
+    left:50%;
+    bottom:25px;
+
+    width:260px;
+    height:170px;
+
+    transform:translateX(-50%) translateY(120px);
+
+    background:#ffffff;
+
+    border-radius:8px;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.20);
+
+    overflow:hidden;
+
+    z-index:1;
+
+    transition:transform .8s ease;
+}
+
+.letter-content{
+    padding:22px;
+}
+
+.letter h2{
+    text-align:center;
+    color:#7b2ff7;
+    margin-bottom:18px;
+}
+
+#message{
+    text-align:center;
+    line-height:1.7;
+    opacity:0;
+}
+
+/* ===========================
+   BACK PANEL
+=========================== */
+
+.envelope::before{
+
+    content:"";
 
     position:absolute;
 
@@ -64,82 +93,42 @@ body{
 
     width:100%;
 
-    height:auto;
+    height:170px;
 
-    z-index:3;
+    background:#8b5cf6;
 
-    user-select:none;
+    border-radius:8px;
 
-    pointer-events:none;
-
+    z-index:0;
 }
 
 /* ===========================
-   PAPER
+   FRONT
 =========================== */
 
-.paper{
+.front{
 
     position:absolute;
 
-    left:50%;
+    left:0;
 
-    bottom:30px;
-
-    transform:translateX(-50%) translateY(120px);
-
-    width:250px;
-
-    height:170px;
-
-    background:#ffffff;
-
-    border-radius:10px;
-
-    box-shadow:0 12px 25px rgba(0,0,0,.18);
-
-    z-index:1;
-
-    overflow:hidden;
-
-    transition:transform .8s ease;
-
-}
-
-.paper-content{
+    bottom:0;
 
     width:100%;
 
-    height:100%;
+    height:170px;
 
-    padding:25px;
+    background:#7c3aed;
 
-}
+    clip-path:polygon(
+        0 0,
+        50% 55%,
+        100% 0,
+        100% 100%,
+        0 100%
+    );
 
-.paper h2{
-
-    text-align:center;
-
-    color:#7c3aed;
-
-    margin-bottom:18px;
-
-    font-size:22px;
-
-}
-
-#message{
-
-    text-align:center;
-
-    line-height:1.7;
-
-    color:#444;
-
-    opacity:0;
-
-    transition:.5s;
-
+    z-index:3;
 }
 
 /* ===========================
@@ -150,24 +139,27 @@ body{
 
     position:absolute;
 
-    left:30px;
+    left:0;
 
-    top:20px;
+    top:0;
 
-    width:300px;
+    width:100%;
 
-    height:70px;
+    height:120px;
 
-    background:linear-gradient(#c4b5fd,#a78bfa);
+    background:#a78bfa;
 
-    clip-path:polygon(0 0,100% 0,50% 100%);
+    clip-path:polygon(
+        0 0,
+        100% 0,
+        50% 100%
+    );
 
-    transform-origin:top center;
-
-    z-index:5;
+    transform-origin:top;
 
     transition:transform .8s ease;
 
+    z-index:4;
 }
 
 /* ===========================
@@ -178,22 +170,19 @@ body{
 
     margin-top:40px;
 
-    padding:13px 34px;
+    padding:12px 30px;
 
     border:none;
 
-    border-radius:35px;
+    border-radius:30px;
 
-    background:#7c3aed;
+    background:#7b2ff7;
 
     color:white;
 
     font-size:16px;
 
-    font-weight:500;
-
-    cursor:pointer;
-
     display:none;
 
+    cursor:pointer;
 }
