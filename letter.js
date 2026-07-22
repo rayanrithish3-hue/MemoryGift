@@ -3,8 +3,7 @@ const message = document.getElementById("message");
 const continueBtn = document.getElementById("continueBtn");
 const tapText = document.querySelector(".tapText");
 
-const text =
-`Your hidden message will appear here...
+const text = `Your hidden message will appear here...
 
 (We'll replace this later with your final message ❤️)`;
 
@@ -20,25 +19,24 @@ envelope.addEventListener("click", () => {
 
     envelope.classList.add("open");
 
+    // Letter animation complete ஆன பிறகு typewriter start
     setTimeout(() => {
-
         typeWriter();
-
     }, 1200);
 
 });
 
-function typeWriter(){
+function typeWriter() {
 
-    if(index < text.length){
+    if (index < text.length) {
 
         message.innerHTML += text.charAt(index);
 
         index++;
 
-        setTimeout(typeWriter,40);
+        setTimeout(typeWriter, 40);
 
-    }else{
+    } else {
 
         continueBtn.style.display = "inline-block";
 
@@ -46,8 +44,8 @@ function typeWriter(){
 
 }
 
-continueBtn.addEventListener("click",()=>{
+continueBtn.addEventListener("click", () => {
 
-    window.location.href="feedback.html";
+    window.location.href = "feedback.html";
 
 });
