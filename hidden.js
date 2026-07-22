@@ -1,10 +1,12 @@
-lottie.loadAnimation({
+const butterfly = lottie.loadAnimation({
     container: document.getElementById("butterflyAnimation"),
     renderer: "svg",
     loop: true,
     autoplay: true,
     path: "assets/butterfly.json"
 });
+
+butterfly.setSpeed(0.8);
 
 const message="You are someone who can't replace.";
 
