@@ -1,3 +1,7 @@
+/* ===========================
+   RESET
+=========================== */
+
 *{
     margin:0;
     padding:0;
@@ -5,74 +9,110 @@
 }
 
 body{
+
     font-family:'Poppins',sans-serif;
-    background:linear-gradient(135deg,#170022,#35115d,#5b21b6);
+
+    background:linear-gradient(135deg,#22003f,#3b136f,#5f2ccf);
+
+    min-height:100vh;
+
     display:flex;
+
     justify-content:center;
+
     align-items:center;
-    height:100vh;
+
     overflow:hidden;
+
 }
 
 .page{
+
     display:flex;
+
     flex-direction:column;
+
     align-items:center;
+
 }
 
-/* =========================
+/* ===========================
    ENVELOPE
-========================= */
+=========================== */
 
-.envelope{
+.envelope-container{
 
     position:relative;
 
-    width:320px;
+    width:360px;
 
-    height:210px;
+    height:240px;
 
 }
 
-/* =========================
-   LETTER
-========================= */
+/* ===========================
+   SVG
+=========================== */
 
-.letter{
+.envelope-image{
 
     position:absolute;
 
-    left:20px;
+    left:0;
 
-    top:25px;
+    bottom:0;
 
-    width:280px;
+    width:100%;
 
-    height:170px;
+    height:auto;
 
-    overflow:hidden;
+    z-index:3;
 
-    z-index:1;
+    user-select:none;
+
+    pointer-events:none;
 
 }
 
-/* Paper */
+/* ===========================
+   PAPER
+=========================== */
 
 .paper{
+
+    position:absolute;
+
+    left:50%;
+
+    bottom:30px;
+
+    transform:translateX(-50%) translateY(120px);
+
+    width:250px;
+
+    height:170px;
+
+    background:#ffffff;
+
+    border-radius:10px;
+
+    box-shadow:0 12px 25px rgba(0,0,0,.18);
+
+    z-index:1;
+
+    overflow:hidden;
+
+    transition:transform .8s ease;
+
+}
+
+.paper-content{
 
     width:100%;
 
     height:100%;
 
-    background:white;
-
-    border-radius:8px;
-
-    padding:20px;
-
-    transform:translateY(150px);
-
-    transition:transform .8s ease;
+    padding:25px;
 
 }
 
@@ -84,15 +124,17 @@ body{
 
     margin-bottom:18px;
 
+    font-size:22px;
+
 }
 
-#hiddenMessage{
+#message{
 
     text-align:center;
 
-    color:#444;
-
     line-height:1.7;
+
+    color:#444;
 
     opacity:0;
 
@@ -100,120 +142,58 @@ body{
 
 }
 
-/* =========================
-   Envelope Back
-========================= */
+/* ===========================
+   FLAP
+=========================== */
 
-.body{
+.flap{
+
     position:absolute;
-    left:0;
-    bottom:0;
-    width:100%;
-    height:120px;
-    background:#8b5cf6;
-    border-radius:0 0 10px 10px;
-    z-index:2;
-}
 
-/* Left Fold */
+    left:30px;
 
-.left{
-    position:absolute;
-    left:0;
-    bottom:0;
-    width:50%;
-    height:120px;
-    background:#7c4dff;
-    clip-path:polygon(0 0,100% 50%,0 100%);
-    z-index:4;
-}
+    top:20px;
 
-/* Right Fold */
+    width:300px;
 
-.right{
-    position:absolute;
-    right:0;
-    bottom:0;
-    width:50%;
-    height:120px;
-    background:#7c4dff;
-    clip-path:polygon(100% 0,0 50%,100% 100%);
-    z-index:4;
-}
+    height:70px;
 
-/* Top Flap */
+    background:linear-gradient(#c4b5fd,#a78bfa);
 
-.top{
-    position:absolute;
-    left:0;
-    top:0;
-    width:100%;
-    height:110px;
-    background:#a78bfa;
     clip-path:polygon(0 0,100% 0,50% 100%);
+
     transform-origin:top center;
-    transition:transform .8s ease;
+
     z-index:5;
+
+    transition:transform .8s ease;
+
 }
 
-/* =========================
-   Continue Button
-========================= */
+/* ===========================
+   BUTTON
+=========================== */
 
 #continueBtn{
 
-    margin-top:35px;
+    margin-top:40px;
 
-    padding:12px 28px;
+    padding:13px 34px;
 
     border:none;
 
-    border-radius:30px;
+    border-radius:35px;
 
-    background:#8b5cf6;
+    background:#7c3aed;
 
     color:white;
 
-    font-size:15px;
+    font-size:16px;
 
-    display:none;
+    font-weight:500;
 
     cursor:pointer;
 
-}
-
-/* =========================
-   OPEN STATE
-========================= */
-
-.envelope.open .top{
-    transform:rotateX(180deg);
-    z-index:0;
-}
-
-.envelope.open .paper{
-    transform:translateY(0);
-}
-
-.envelope.show-message #hiddenMessage{
-    opacity:1;
-}
-
-#continueBtn.show{
-    display:inline-block;
-    animation:fadeUp .5s ease forwards;
-}
-
-@keyframes fadeUp{
-
-    from{
-        opacity:0;
-        transform:translateY(20px);
-    }
-
-    to{
-        opacity:1;
-        transform:translateY(0);
-    }
+    display:none;
 
 }
