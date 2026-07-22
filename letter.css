@@ -1,0 +1,215 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:linear-gradient(135deg,#170022,#35115d,#5b21b6);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    overflow:hidden;
+}
+
+.page{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+/* =========================
+   ENVELOPE
+========================= */
+
+.envelope{
+
+    position:relative;
+
+    width:320px;
+
+    height:210px;
+
+}
+
+/* =========================
+   LETTER
+========================= */
+
+.letter{
+
+    position:absolute;
+
+    left:20px;
+
+    top:25px;
+
+    width:280px;
+
+    height:170px;
+
+    overflow:hidden;
+
+    z-index:1;
+
+}
+
+/* Paper */
+
+.paper{
+
+    width:100%;
+
+    height:100%;
+
+    background:white;
+
+    border-radius:8px;
+
+    padding:20px;
+
+    transform:translateY(150px);
+
+    transition:transform .8s ease;
+
+}
+
+.paper h2{
+
+    text-align:center;
+
+    color:#7c3aed;
+
+    margin-bottom:18px;
+
+}
+
+#hiddenMessage{
+
+    text-align:center;
+
+    color:#444;
+
+    line-height:1.7;
+
+    opacity:0;
+
+    transition:.5s;
+
+}
+
+/* =========================
+   Envelope Back
+========================= */
+
+.body{
+
+    position:absolute;
+
+    inset:0;
+
+    background:#8b5cf6;
+
+    border-radius:10px;
+
+    z-index:2;
+
+}
+
+/* Left Fold */
+
+.left{
+
+    position:absolute;
+
+    left:0;
+
+    top:0;
+
+    width:50%;
+
+    height:100%;
+
+    background:#7646f2;
+
+    clip-path:polygon(0 0,100% 50%,0 100%);
+
+    z-index:3;
+
+}
+
+/* Right Fold */
+
+.right{
+
+    position:absolute;
+
+    right:0;
+
+    top:0;
+
+    width:50%;
+
+    height:100%;
+
+    background:#7646f2;
+
+    clip-path:polygon(100% 0,0 50%,100% 100%);
+
+    z-index:3;
+
+}
+
+/* Top Flap */
+
+.top{
+
+    position:absolute;
+
+    left:0;
+
+    top:0;
+
+    width:100%;
+
+    height:110px;
+
+    background:#a78bfa;
+
+    clip-path:polygon(0 0,100% 0,50% 100%);
+
+    transform-origin:top;
+
+    z-index:5;
+
+    transition:transform .7s ease;
+
+}
+
+/* =========================
+   Continue Button
+========================= */
+
+#continueBtn{
+
+    margin-top:35px;
+
+    padding:12px 28px;
+
+    border:none;
+
+    border-radius:30px;
+
+    background:#8b5cf6;
+
+    color:white;
+
+    font-size:15px;
+
+    display:none;
+
+    cursor:pointer;
+
+}
