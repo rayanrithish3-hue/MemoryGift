@@ -108,3 +108,64 @@ body{
     font-size:17px;
 
 }
+
+/* ===== Envelope Layer Fix ===== */
+
+.envelope{
+    position:relative;
+    width:420px;
+    height:300px;
+}
+
+.envelope-img{
+    position:relative;
+    z-index:5;
+    display:block;
+    width:100%;
+}
+
+.letter{
+
+    position:absolute;
+
+    left:50%;
+    bottom:45px;
+
+    width:310px;
+    height:210px;
+
+    transform:translateX(-50%) translateY(120px);
+
+    background:#fff;
+
+    border-radius:12px;
+
+    padding:24px;
+
+    box-shadow:0 12px 30px rgba(0,0,0,.18);
+
+    z-index:1;
+
+    transition:transform .9s ease;
+
+}
+
+.letter.show{
+
+    transform:translateX(-50%) translateY(-20px);
+
+}
+
+#openBtn{
+
+    position:absolute;
+
+    left:50%;
+
+    bottom:-70px;
+
+    transform:translateX(-50%);
+
+    z-index:10;
+
+}
