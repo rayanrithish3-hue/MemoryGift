@@ -1,49 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>For You ❤️</title>
 
-    <link rel="stylesheet" href="letter.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Lottie Player -->
-    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+<title>Open Letter</title>
+
+<link rel="stylesheet" href="letter.css">
+
 </head>
 
 <body>
 
 <div class="container">
 
-    <!-- Lottie Envelope -->
-    <div id="animationContainer">
+    <div id="lottie"></div>
 
-        <lottie-player
-            id="envelopeAnimation"
-            src="../assets/envelope.json"
-            background="transparent"
-            speed="1"
-            style="width:320px;height:320px;"
-            autoplay="false">
-        </lottie-player>
-
-    </div>
-
-    <!-- Open Button -->
     <button id="openBtn">
         💌 Open Letter
     </button>
 
-    <!-- Hidden Letter -->
-    <div id="letterCard" class="hidden">
+    <div id="letter" class="hidden">
 
         <h1>For You ❤️</h1>
 
         <p>
 
             This is where your real letter will appear.
-
-            Later we'll replace this with your original message.
 
         </p>
 
@@ -57,7 +42,10 @@
 
 </div>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js"></script>
+
 <script src="letter.js"></script>
 
 </body>
+
 </html>
