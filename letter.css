@@ -29,12 +29,12 @@ body{
 .letter{
     position:absolute;
     left:50%;
-    bottom:-65px;
+    bottom:-80px;
     transform:translateX(-50%);
     width:250px;
     height:200px;
     z-index:2;
-    transition:1s ease;
+    transition:transform .9s ease;
 }
 
 .paper{
@@ -88,11 +88,13 @@ body{
 
 .front{
     position:absolute;
+    left:0;
     bottom:0;
     width:100%;
-    height:60%;
-    background:#f2ca88;
-    border-radius:180px 180px 0 0;
+    height:0;
+    border-left:170px solid transparent;
+    border-right:170px solid transparent;
+    border-bottom:120px solid #f2ca88;
     z-index:8;
 }
 
@@ -101,13 +103,12 @@ body{
 .left{
     position:absolute;
     left:0;
-    top:0;
+    bottom:0;
     width:0;
     height:0;
     border-top:120px solid transparent;
-    border-bottom:120px solid transparent;
-    border-right:170px solid rgba(255,255,255,.12);
-    z-index:4;
+    border-right:170px solid #efc27d;
+    z-index:7;
 }
 
 /* ---------------- RIGHT ---------------- */
@@ -115,13 +116,12 @@ body{
 .right{
     position:absolute;
     right:0;
-    top:0;
+    bottom:0;
     width:0;
     height:0;
     border-top:120px solid transparent;
-    border-bottom:120px solid transparent;
-    border-left:170px solid rgba(255,255,255,.08);
-    z-index:4;
+    border-left:170px solid #efc27d;
+    z-index:7;
 }
 
 /* ---------------- FLAP ---------------- */
@@ -147,5 +147,6 @@ body{
 }
 
 .envelope.open .letter{
-    transform:translateX(-50%) translateY(-70px);
+    transform:translateX(-50%) translateY(-55px);
+}
 }
