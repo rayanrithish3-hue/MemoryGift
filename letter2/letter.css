@@ -5,6 +5,7 @@
 }
 
 body{
+    width:100%;
     height:100vh;
     display:flex;
     justify-content:center;
@@ -14,194 +15,85 @@ body{
     overflow:hidden;
 }
 
-.scene{
-    text-align:center;
-}
-
-.envelope{
-    position:relative;
-    width:420px;
-    height:280px;
-    margin:auto;
-}
-
-/* ===========================
-   LETTER
-=========================== */
-
-.letter{
-
-    position:absolute;
-
-    left:50%;
-    bottom:35px;
-
-    transform:translateX(-50%) translateY(110px);
-
-    width:300px;
-    height:190px;
-
-    background:white;
-
-    border-radius:12px;
-
-    padding:22px;
-
-    box-shadow:0 12px 30px rgba(0,0,0,.18);
-
-    transition:1s;
-
-    z-index:1;
-}
-
-.letter.show{
-
-    transform:translateX(-50%) translateY(-40px);
-
-}
-
-/* ===========================
-   ENVELOPE
-=========================== */
-
-.back{
-
-    position:absolute;
-
+.container{
     width:100%;
-    height:100%;
-
-    background:#f2b6c6;
-
-    border-radius:8px;
-
-    z-index:2;
-
+    max-width:450px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
 }
 
-/* left */
-
-.left-fold{
-
-    position:absolute;
-
-    left:0;
-
-    bottom:0;
-
-    width:0;
-    height:0;
-
-    border-top:140px solid transparent;
-    border-bottom:140px solid transparent;
-
-    border-left:210px solid #ec8fb0;
-
-    z-index:4;
-
+#lottie{
+    width:320px;
+    height:320px;
+    margin-bottom:20px;
 }
-
-/* right */
-
-.right-fold{
-
-    position:absolute;
-
-    right:0;
-
-    bottom:0;
-
-    width:0;
-    height:0;
-
-    border-top:140px solid transparent;
-    border-bottom:140px solid transparent;
-
-    border-right:210px solid #e27da1;
-
-    z-index:4;
-
-}
-
-/* flap */
-
-.flap{
-
-    position:absolute;
-
-    top:0;
-    left:0;
-
-    width:0;
-    height:0;
-
-    border-left:210px solid transparent;
-    border-right:210px solid transparent;
-
-    border-top:150px solid #f5a8bf;
-
-    transform-origin:top;
-
-    transition:1s;
-
-    z-index:6;
-
-}
-
-.flap.open{
-
-    transform:rotateX(180deg);
-
-}
-
-/* ===========================
-   BUTTONS
-=========================== */
 
 #openBtn{
-
-    margin-top:40px;
-
-    padding:14px 38px;
-
+    padding:14px 35px;
     border:none;
-
     border-radius:40px;
-
+    background:#ff4f88;
+    color:#fff;
+    font-size:18px;
     cursor:pointer;
+    transition:0.3s;
+}
 
-    background:#ff5c8d;
+#openBtn:hover{
+    transform:scale(1.05);
+}
 
-    color:white;
+.hidden{
+    display:none;
+}
 
-    font-size:17px;
+#letter{
+    width:340px;
+    background:#fff;
+    padding:25px;
+    border-radius:16px;
+    box-shadow:0 10px 30px rgba(0,0,0,.15);
+    text-align:center;
+    animation:fadeUp .8s ease;
+}
 
+#letter h1{
+    margin-bottom:15px;
+}
+
+#letter p{
+    line-height:1.7;
+    margin-bottom:25px;
 }
 
 #continueBtn{
-
-    margin-top:20px;
-
-    display:none;
-
-    padding:14px 40px;
-
+    padding:12px 35px;
     border:none;
-
     border-radius:40px;
-
-    background:#7b5cff;
-
+    background:#6c63ff;
     color:white;
-
-    font-size:17px;
-
     cursor:pointer;
-
+    font-size:17px;
 }
 
-#continueBtn.show{
+@keyframes fadeUp{
 
-    display:inline-block;
+    from{
+
+        opacity:0;
+
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
 
 }
