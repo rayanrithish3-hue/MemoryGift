@@ -2,58 +2,43 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Letter</title>
 
     <link rel="stylesheet" href="letter.css">
-
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-<div class="page">
+<div class="wrapper">
 
-    <!-- Envelope Container -->
-    <div class="envelope-container" id="envelopeContainer">
+    <div class="envelope" id="envelope">
 
         <!-- Letter -->
-        <div class="paper" id="paper">
+        <div class="letter" id="letter">
 
-            <div class="paper-content">
+            <div class="letter-content">
 
                 <h2>For Bharathi Priya ❤️</h2>
 
-                <p id="message">
-                </p>
+                <p id="message"></p>
 
             </div>
 
         </div>
 
-        <!-- Envelope SVG -->
-        <img
-            src="assets/envelope.svg"
-            alt="Envelope"
-            class="envelope-image"
-            id="envelopeImage"
-        >
-
-        <!-- Flap Overlay -->
+        <!-- Top Flap -->
         <div class="flap" id="flap"></div>
+
+        <!-- Front of Envelope -->
+        <div class="front"></div>
 
     </div>
 
-    <!-- Continue -->
     <button id="continueBtn">
-
         Continue ❤️
-
     </button>
 
 </div>
@@ -61,5 +46,4 @@
 <script src="letter.js"></script>
 
 </body>
-
 </html>
