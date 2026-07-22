@@ -6,6 +6,8 @@ const animation = lottie.loadAnimation({
     path: "../assets/envelope.json"
 });
 
+animation.setSpeed(2.5);
+
 const openBtn = document.getElementById("openBtn");
 const lottieBox = document.getElementById("lottie");
 const letter = document.getElementById("letter");
