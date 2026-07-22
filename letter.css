@@ -105,87 +105,55 @@ body{
 ========================= */
 
 .body{
-
     position:absolute;
-
-    inset:0;
-
+    left:0;
+    bottom:0;
+    width:100%;
+    height:120px;
     background:#8b5cf6;
-
-    border-radius:10px;
-
+    border-radius:0 0 10px 10px;
     z-index:2;
-
 }
 
 /* Left Fold */
 
 .left{
-
     position:absolute;
-
     left:0;
-
-    top:0;
-
+    bottom:0;
     width:50%;
-
-    height:100%;
-
-    background:#7646f2;
-
+    height:120px;
+    background:#7c4dff;
     clip-path:polygon(0 0,100% 50%,0 100%);
-
-    z-index:3;
-
+    z-index:4;
 }
 
 /* Right Fold */
 
 .right{
-
     position:absolute;
-
     right:0;
-
-    top:0;
-
+    bottom:0;
     width:50%;
-
-    height:100%;
-
-    background:#7646f2;
-
+    height:120px;
+    background:#7c4dff;
     clip-path:polygon(100% 0,0 50%,100% 100%);
-
-    z-index:3;
-
+    z-index:4;
 }
 
 /* Top Flap */
 
 .top{
-
     position:absolute;
-
     left:0;
-
     top:0;
-
     width:100%;
-
     height:110px;
-
     background:#a78bfa;
-
     clip-path:polygon(0 0,100% 0,50% 100%);
-
-    transform-origin:top;
-
+    transform-origin:top center;
+    transition:transform .8s ease;
     z-index:5;
-
-    transition:transform .7s ease;
-
 }
 
 /* =========================
