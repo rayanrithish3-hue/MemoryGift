@@ -3,15 +3,15 @@
 
 <head>
 
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Letter</title>
+    <title>Letter</title>
 
-<link rel="stylesheet" href="letter.css">
+    <link rel="stylesheet" href="letter.css">
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 </head>
 
@@ -19,36 +19,37 @@
 
 <div class="page">
 
-    <div class="envelope" id="envelope">
+    <!-- Envelope Container -->
+    <div class="envelope-container" id="envelopeContainer">
 
-        <!-- LETTER -->
+        <!-- Letter -->
+        <div class="paper" id="paper">
 
-        <div class="letter" id="letter">
-
-            <div class="paper">
+            <div class="paper-content">
 
                 <h2>For Bharathi Priya ❤️</h2>
 
-                <p id="hiddenMessage">
-
+                <p id="message">
                 </p>
 
             </div>
 
         </div>
 
-        <!-- ENVELOPE -->
+        <!-- Envelope SVG -->
+        <img
+            src="assets/envelope.svg"
+            alt="Envelope"
+            class="envelope-image"
+            id="envelopeImage"
+        >
 
-        <div class="body"></div>
-
-        <div class="left"></div>
-
-        <div class="right"></div>
-
-        <div class="top" id="topFlap"></div>
+        <!-- Flap Overlay -->
+        <div class="flap" id="flap"></div>
 
     </div>
 
+    <!-- Continue -->
     <button id="continueBtn">
 
         Continue ❤️
