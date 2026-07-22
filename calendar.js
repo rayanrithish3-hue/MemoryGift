@@ -264,7 +264,7 @@ nextBtn.addEventListener("click", () => {
 
     } else {
 
-        window.location.href = "hidden.html";
+        window.location.href = "envelope.html";
 
     }
 
