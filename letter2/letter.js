@@ -22,5 +22,5 @@ animation.addEventListener("complete", () => {
 });
 
 continueBtn.addEventListener("click", () => {
-    window.location.href = "../index.html"; // Later we'll change this if needed
+    window.location.href = "../hidden.html";
 });
