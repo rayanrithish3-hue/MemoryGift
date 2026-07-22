@@ -264,7 +264,7 @@ nextBtn.addEventListener("click", () => {
 
     } else {
 
-        window.location.href = "letter.html";
+        window.location.href = "./letter2/letter.html";
 
     }
 
