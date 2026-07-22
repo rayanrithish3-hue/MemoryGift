@@ -3,49 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hidden Letter</title>
+    <title>For You ❤️</title>
 
     <link rel="stylesheet" href="letter.css">
+
+    <!-- Lottie Player -->
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 </head>
+
 <body>
 
-<div class="scene">
+<div class="container">
 
-    <div class="envelope" id="envelope">
+    <!-- Lottie Envelope -->
+    <div id="animationContainer">
 
-        <!-- Letter -->
-        <div class="letter" id="letter">
-
-            <h2>For You ❤️</h2>
-
-            <p>
-                This message was hidden inside the envelope.<br><br>
-
-                One small click opened not just a letter,
-                but a memory that will always stay with us.
-            </p>
-
-        </div>
-
-        <!-- Back -->
-        <div class="back"></div>
-
-        <!-- Left Fold -->
-        <div class="left-fold"></div>
-
-        <!-- Right Fold -->
-        <div class="right-fold"></div>
-
-        <!-- Top Flap -->
-        <div class="flap" id="flap"></div>
+        <lottie-player
+            id="envelopeAnimation"
+            src="../assets/envelope.json"
+            background="transparent"
+            speed="1"
+            style="width:320px;height:320px;"
+            autoplay="false">
+        </lottie-player>
 
     </div>
 
-    <button id="openBtn">Open</button>
-
-    <button id="continueBtn">
-        Continue →
+    <!-- Open Button -->
+    <button id="openBtn">
+        💌 Open Letter
     </button>
+
+    <!-- Hidden Letter -->
+    <div id="letterCard" class="hidden">
+
+        <h1>For You ❤️</h1>
+
+        <p>
+
+            This is where your real letter will appear.
+
+            Later we'll replace this with your original message.
+
+        </p>
+
+        <button id="continueBtn">
+
+            Continue →
+
+        </button>
+
+    </div>
 
 </div>
 
