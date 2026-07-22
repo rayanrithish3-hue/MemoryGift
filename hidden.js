@@ -1,3 +1,11 @@
+lottie.loadAnimation({
+    container: document.getElementById("butterflyAnimation"),
+    renderer: "svg",
+    loop: true,
+    autoplay: true,
+    path: "assets/butterfly.json"
+});
+
 const message="You are someone who can't replace.";
 
 const typing=document.getElementById("typing");
