@@ -213,3 +213,39 @@ body{
     cursor:pointer;
 
 }
+
+/* =========================
+   OPEN STATE
+========================= */
+
+.envelope.open .top{
+    transform:rotateX(180deg);
+    z-index:0;
+}
+
+.envelope.open .paper{
+    transform:translateY(0);
+}
+
+.envelope.show-message #hiddenMessage{
+    opacity:1;
+}
+
+#continueBtn.show{
+    display:inline-block;
+    animation:fadeUp .5s ease forwards;
+}
+
+@keyframes fadeUp{
+
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
