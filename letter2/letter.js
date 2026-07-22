@@ -7,27 +7,20 @@ const animation = lottie.loadAnimation({
 });
 
 const openBtn = document.getElementById("openBtn");
+const lottieBox = document.getElementById("lottie");
 const letter = document.getElementById("letter");
 const continueBtn = document.getElementById("continueBtn");
 
 openBtn.addEventListener("click", () => {
-
     openBtn.style.display = "none";
-
     animation.goToAndPlay(0, true);
-
 });
 
 animation.addEventListener("complete", () => {
-
-    document.getElementById("lottie").style.display = "none";
-
+    lottieBox.style.display = "none";
     letter.classList.remove("hidden");
-
 });
 
 continueBtn.addEventListener("click", () => {
-
-    alert("Continue button works! We'll connect it to the next page later.");
-
+    window.location.href = "../index.html"; // Later we'll change this if needed
 });
