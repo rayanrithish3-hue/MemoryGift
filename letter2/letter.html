@@ -1,41 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hidden Letter</title>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Hidden Letter</title>
-
-<link rel="stylesheet" href="letter.css">
-
+    <link rel="stylesheet" href="letter.css">
 </head>
-
 <body>
 
 <div class="scene">
 
-    <div class="envelope">
+    <div class="envelope" id="envelope">
 
-    <div class="letter" id="letter">
+        <!-- Letter -->
+        <div class="letter" id="letter">
 
-        <h2>For You ❤️</h2>
+            <h2>For You ❤️</h2>
 
-        <p>
-            This message was hidden inside the envelope.
-            Thank you for opening it.
-        </p>
+            <p>
+                This message was hidden inside the envelope.<br><br>
+
+                One small click opened not just a letter,
+                but a memory that will always stay with us.
+            </p>
+
+        </div>
+
+        <!-- Back -->
+        <div class="back"></div>
+
+        <!-- Left Fold -->
+        <div class="left-fold"></div>
+
+        <!-- Right Fold -->
+        <div class="right-fold"></div>
+
+        <!-- Top Flap -->
+        <div class="flap" id="flap"></div>
 
     </div>
 
-    <img
-        src="https://rayanrithish3-hue.github.io/MemoryGift/assets/envelope.svg"
-        class="envelope-img"
-        id="envelopeImg"
-        alt="Envelope">
+    <button id="openBtn">Open</button>
 
-    <button id="openBtn">
-        Open
+    <button id="continueBtn">
+        Continue →
     </button>
 
 </div>
