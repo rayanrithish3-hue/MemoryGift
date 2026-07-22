@@ -98,3 +98,46 @@ cursor:pointer;
 display:none;
 
 }
+
+#butterfly{
+    position:fixed;
+    width:70px;
+    left:-90px;
+    top:75%;
+    z-index:9999;
+    pointer-events:none;
+    animation:flyAcross 6s ease-in-out forwards;
+}
+
+@keyframes flyAcross{
+
+0%{
+    left:-90px;
+    top:75%;
+    transform:rotate(-10deg) scale(.8);
+}
+
+25%{
+    left:20%;
+    top:55%;
+    transform:rotate(8deg) scale(1);
+}
+
+50%{
+    left:45%;
+    top:35%;
+    transform:rotate(-8deg) scale(1.05);
+}
+
+75%{
+    left:70%;
+    top:20%;
+    transform:rotate(10deg) scale(1);
+}
+
+100%{
+    left:110%;
+    top:8%;
+    transform:rotate(20deg) scale(.9);
+}
+}
