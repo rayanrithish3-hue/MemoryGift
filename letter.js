@@ -3,49 +3,51 @@ const message = document.getElementById("message");
 const continueBtn = document.getElementById("continueBtn");
 const tapText = document.querySelector(".tapText");
 
-const text = `Your hidden message will appear here...
+const finalMessage = `Your hidden message will appear here...
 
-(We'll replace this later with your final message ❤️)`;
+(We'll replace this with your final message later ❤️)`;
 
-let index = 0;
 let opened = false;
+let index = 0;
 
 envelope.addEventListener("click", () => {
 
-    if (opened) return;
+    if(opened) return;
+
     opened = true;
 
-    tapText.style.display = "none";
+    tapText.style.opacity = "0";
 
     envelope.classList.add("open");
 
-    // Letter animation complete ஆன பிறகு typewriter start
     setTimeout(() => {
+
         typeWriter();
-    }, 1200);
+
+    },1200);
 
 });
 
-function typeWriter() {
+function typeWriter(){
 
-    if (index < text.length) {
+    if(index < finalMessage.length){
 
-        message.innerHTML += text.charAt(index);
+        message.textContent += finalMessage.charAt(index);
 
         index++;
 
-        setTimeout(typeWriter, 40);
+        setTimeout(typeWriter,35);
 
-    } else {
+    }else{
 
-        continueBtn.style.display = "inline-block";
+        continueBtn.style.display="inline-block";
 
     }
 
 }
 
-continueBtn.addEventListener("click", () => {
+continueBtn.addEventListener("click",()=>{
 
-    window.location.href = "feedback.html";
+    window.location.href="feedback.html";
 
 });
