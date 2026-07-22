@@ -2,143 +2,130 @@
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:"Poppins",sans-serif;
+    font-family:Poppins,sans-serif;
 }
 
 body{
-    width:100%;
-    height:100vh;
+    background:#2b0d57;
     display:flex;
     justify-content:center;
     align-items:center;
-    background:#2b0f54;
+    height:100vh;
     overflow:hidden;
 }
 
-.page{
-    width:100%;
-    display:flex;
-    justify-content:center;
-    align-items:center;
+.scene{
+    perspective:1200px;
 }
 
-.envelope-container{
+.envelope{
     position:relative;
     width:340px;
-    height:300px;
-    cursor:pointer;
+    height:240px;
 }
 
-/* ================= LETTER ================= */
+/* ---------------- LETTER ---------------- */
 
 .letter{
     position:absolute;
     left:50%;
-    bottom:60px;
+    bottom:20px;
     transform:translateX(-50%);
     width:250px;
-    height:260px;
-    background:#ffffff;
-    border-radius:10px;
-    box-shadow:0 12px 30px rgba(0,0,0,.18);
+    height:200px;
+    z-index:2;
     overflow:hidden;
-    transition:transform .9s ease;
-    z-index:1;
+    transition:1s ease;
 }
 
-.letter.open{
-    transform:translateX(-50%) translateY(-130px);
-}
-
-.letter-content{
+.paper{
     width:100%;
     height:100%;
-    padding:25px;
+    background:#fff;
+    border-radius:10px;
+    padding:22px;
     text-align:center;
-    display:flex;
-    flex-direction:column;
-    justify-content:space-between;
+    box-shadow:0 10px 30px rgba(0,0,0,.18);
 }
 
-.letter h2{
-    color:#ff4f81;
-    font-size:28px;
+.paper h2{
+    color:#ff3c73;
+    margin-bottom:18px;
 }
 
-.letter p{
-    font-size:15px;
-    line-height:1.7;
+.paper p{
     color:#555;
+    line-height:1.6;
+    margin-bottom:14px;
 }
 
 #continueBtn{
+    margin-top:12px;
+    padding:12px 28px;
     border:none;
-    outline:none;
-    padding:12px;
     border-radius:30px;
-    background:#ff4f81;
-    color:white;
-    cursor:pointer;
+    background:#7b3ff2;
+    color:#fff;
     font-size:15px;
+    cursor:pointer;
     opacity:0;
-    pointer-events:none;
     transition:.4s;
 }
 
 #continueBtn.show{
     opacity:1;
-    pointer-events:auto;
 }
 
-/* ================= ENVELOPE ================= */
+/* ---------------- BACK ---------------- */
 
-.envelope{
+.back{
+    position:absolute;
+    inset:0;
+    background:#efc27d;
+    z-index:1;
+}
+
+/* ---------------- FRONT ---------------- */
+
+.front{
     position:absolute;
     bottom:0;
-    width:340px;
-    height:220px;
+    width:100%;
+    height:60%;
+    background:#f2ca88;
+    border-radius:180px 180px 0 0;
     z-index:5;
 }
 
-/* Bottom */
+/* ---------------- LEFT ---------------- */
 
-.bottom-fold{
-    position:absolute;
-    width:100%;
-    height:100%;
-    background:#efc07b;
-    border-radius:0 0 8px 8px;
-}
-
-/* Left */
-
-.left-fold{
+.left{
     position:absolute;
     left:0;
     top:0;
     width:0;
     height:0;
-    border-top:110px solid transparent;
-    border-bottom:110px solid transparent;
-    border-right:170px solid #f5ca8a;
-    z-index:8;
+    border-top:120px solid transparent;
+    border-bottom:120px solid transparent;
+    border-right:170px solid rgba(255,255,255,.12);
+    z-index:6;
 }
 
-/* Right */
+/* ---------------- RIGHT ---------------- */
 
-.right-fold{
+.right{
     position:absolute;
     right:0;
     top:0;
     width:0;
     height:0;
-    border-top:110px solid transparent;
-    border-bottom:110px solid transparent;
-    border-left:170px solid #f2c27e;
-    z-index:8;
+    border-top:120px solid transparent;
+    border-bottom:120px solid transparent;
+    border-left:170px solid rgba(255,255,255,.08);
+    z-index:6;
 }
 
-/* Flap */
+/* ---------------- FLAP ---------------- */
 
 .flap{
     position:absolute;
@@ -149,21 +136,17 @@ body{
     border-left:170px solid transparent;
     border-right:170px solid transparent;
     border-top:120px solid #f8ddb0;
-    transform-origin:top;
-    transition:transform .8s ease;
+    transform-origin:top center;
+    transition:0.8s;
     z-index:10;
 }
 
-.flap.open{
+/* ---------------- OPEN ---------------- */
+
+.envelope.open .flap{
     transform:rotateX(180deg);
 }
 
-/* Responsive */
-
-@media(max-width:500px){
-
-    .envelope-container{
-        transform:scale(.88);
-    }
-
+.envelope.open .letter{
+    transform:translateX(-50%) translateY(-120px);
 }
