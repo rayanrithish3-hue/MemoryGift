@@ -144,6 +144,7 @@ display:none;
     pointer-events:none;
     z-index:15;
     transform-origin:center;
+    filter:drop-shadow(0 0 8px rgba(255,255,255,.25));
 }
 
 .butterfly1{
@@ -268,4 +269,48 @@ top:55%;
 transform:scale(.8);
 }
 
+}
+
+@keyframes float {
+
+    0%{
+        margin-top:0;
+    }
+
+    25%{
+        margin-top:-8px;
+    }
+
+    50%{
+        margin-top:5px;
+    }
+
+    75%{
+        margin-top:-5px;
+    }
+
+    100%{
+        margin-top:0;
+    }
+
+}
+
+.butterfly1{
+    animation:
+        flyOne 15s ease-in-out infinite,
+        float 2.8s ease-in-out infinite;
+}
+
+.butterfly2{
+    animation:
+        flyTwo 19s ease-in-out infinite,
+        float 3.5s ease-in-out infinite;
+    animation-delay:2.5s,0s;
+}
+
+.butterfly3{
+    animation:
+        flyThree 17s ease-in-out infinite,
+        float 2.3s ease-in-out infinite;
+    animation-delay:6s,0s;
 }
