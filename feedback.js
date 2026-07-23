@@ -1,6 +1,7 @@
 const btn = document.getElementById("sendBtn");
 const box = document.getElementById("message");
 const success = document.getElementById("success");
+const quoteOverlay = document.getElementById("quoteOverlay");
 
 btn.addEventListener("click", () => {
 
