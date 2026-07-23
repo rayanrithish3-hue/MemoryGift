@@ -31,9 +31,7 @@ btn.addEventListener("click", () => {
 
     .then(()=>{
 
-    const quoteOverlay = document.getElementById("quoteOverlay");
-
-    confetti({
+       confetti({
         particleCount:250,
         spread:180,
         origin:{y:.6}
