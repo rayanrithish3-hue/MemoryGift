@@ -199,11 +199,27 @@ color:#fff;
 
 margin-top:35px;
 
-font-size:22px;
+font-family:"Great Vibes",cursive;
 
-font-style:italic;
+font-size:42px;
 
-color:#d8b4fe;
+color:#f3d1ff;
+
+letter-spacing:2px;
+
+text-shadow:0 0 12px rgba(243,209,255,.45);
+
+display:inline-block;
+
+overflow:hidden;
+
+white-space:nowrap;
+
+width:0;
+
+animation:signatureWrite 2.8s steps(18,end) forwards;
+
+animation-delay:1s;
 
 }
 
@@ -223,6 +239,18 @@ opacity:1;
 
 transform:translateY(0);
 
+}
+
+}
+
+@keyframes signatureWrite{
+
+from{
+    width:0;
+}
+
+to{
+    width:100%;
 }
 
 }
