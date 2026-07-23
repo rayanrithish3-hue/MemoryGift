@@ -56,12 +56,12 @@ signature.classList.remove("animate");
 void signature.offsetWidth; // Force reflow
 signature.classList.add("animate");
 
-// Hide quote after 10 seconds
+// Hide quote after 20 seconds
 setTimeout(()=>{
 
     quoteOverlay.classList.remove("show");
 
-},10000);
+},20000);
 
     },2500);
 
