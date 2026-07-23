@@ -30,27 +30,36 @@ btn.addEventListener("click", () => {
 
     .then(()=>{
 
-        confetti({
+    const quoteOverlay = document.getElementById("quoteOverlay");
 
-            particleCount:250,
+    confetti({
+        particleCount:250,
+        spread:180,
+        origin:{y:.6}
+    });
 
-            spread:180,
+    success.style.display="block";
 
-            origin:{y:.6}
+    box.value="";
 
-        });
+    // Success message 2.5 seconds
+    setTimeout(()=>{
 
-        success.style.display="block";
+        success.style.display="none";
 
-        box.value="";
+        // Show quote
+        quoteOverlay.classList.add("show");
 
+        // Hide quote after 10 seconds
         setTimeout(()=>{
 
-            success.style.display="none";
+            quoteOverlay.classList.remove("show");
 
-        },3000);
+        },10000);
 
-    })
+    },2500);
+
+})
 
     .catch((error)=>{
 
