@@ -47,14 +47,21 @@ btn.addEventListener("click", () => {
         success.style.display="none";
 
         // Show quote
-        quoteOverlay.classList.add("show");
+quoteOverlay.classList.add("show");
 
-        // Hide quote after 10 seconds
-        setTimeout(()=>{
+// Restart signature animation
+const signature = document.querySelector(".signature");
 
-            quoteOverlay.classList.remove("show");
+signature.classList.remove("animate");
+void signature.offsetWidth; // Force reflow
+signature.classList.add("animate");
 
-        },10000);
+// Hide quote after 10 seconds
+setTimeout(()=>{
+
+    quoteOverlay.classList.remove("show");
+
+},10000);
 
     },2500);
 
