@@ -147,17 +147,17 @@ display:none;
 }
 
 .butterfly1{
-    animation:flyOne 18s ease-in-out infinite;
+    animation:flyOne 15s ease-in-out infinite;
 }
 
 .butterfly2{
-    animation:flyTwo 22s ease-in-out infinite;
-    animation-delay:5s;
+    animation:flyTwo 19s ease-in-out infinite;
+    animation-delay:2.5s;
 }
 
 .butterfly3{
-    animation:flyThree 20s ease-in-out infinite;
-    animation-delay:10s;
+    animation:flyThree 17s ease-in-out infinite;
+    animation-delay:6s;
 }
 
 @keyframes flyOne{
